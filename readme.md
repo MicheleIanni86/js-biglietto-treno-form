@@ -16,6 +16,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 ```
 
 ## Svolgimento
+
 - Chiedo all'utente i km che vuole percorrere
 - Chiedo all'utente qual è la sua età
 - Calcolo il prezzo del biglietto base

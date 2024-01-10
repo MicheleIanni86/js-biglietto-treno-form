@@ -23,31 +23,33 @@
     <form class="mt-4">
         <div class="mb-3">
           <label class="form-label">Nome e Cognome</label>
-          <input type="text" class="form-control" id="user-name">
+          <input type="text" class="form-control" id="userName">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Km da percorrere</label>
-            <input type="text" class="form-control" id="user-km">
+            <input type="text" class="form-control" id="userKm" >
           </div>
   
           
           <div class="mb-4">
               <label class="form-label">Fascia d'età</label>
-              <select class="form-select" id="user-age">
+              <select class="form-select" id="userAge">
                   <option value="minorenne">Minorenne</option>
                   <option value="maggiorenne">Maggiorenne</option>
-                  <option value="over 65">Over 65</option>
+                  <option value="over65">Over 65</option>
                 </select>
             </div>
             
             <div >
-                <button class="btn btn-primary generateButton g-5">Genera</button>
-                <button class="btn btn-danger">Annulla</button>
+                <button type="button" class="btn btn-primary g-5" id="generateButton">Genera</button>
+                <button type="reset" class="btn btn-danger">Annulla</button>
             </div>
 
     </form> 
-
+    <div class="mt-4">
+        <p id="resultPrice"></p>
+    </div>
 
 
 
