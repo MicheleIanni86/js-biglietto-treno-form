@@ -17,40 +17,72 @@
 </head>
 <body>
 
-<div class="container">
-    <h1 class="mt-5">Calcola il prezzo del tuo biglietto</h1>
-    
-    <form class="mt-4">
-        <div class="mb-3">
-          <label class="form-label">Nome e Cognome</label>
-          <input type="text" class="form-control" id="userName">
-        </div>
+    <!-- TITOLO -->
+    <h2 class="mt-5 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-        <div class="mb-3">
-            <label class="form-label">Km da percorrere</label>
-            <input type="text" class="form-control" id="userKm" >
-          </div>
-  
-          
-          <div class="mb-4">
-              <label class="form-label">Fascia d'età</label>
-              <select class="form-select" id="userAge">
-                  <option value="minorenne">Minorenne</option>
-                  <option value="maggiorenne">Maggiorenne</option>
-                  <option value="over65">Over 65</option>
-                </select>
+<!-- PARTE DI INPUT -->
+<div class="container">
+        <form class="mt-4 d-flex flex-column gap-1">
+
+            <div class="d-flex justify-content-center gap-5">
+
+                <div class="text-center">
+                    <label class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="userName">
+                </div>
+                
+                <div class="text-center">
+                    <label class="form-label">Km da percorrere</label>
+                    <input type="text" class="form-control" id="userKm" >
+                </div>
+                
+                
+                <div class="mb-4 text-center">
+                    <label class="form-label">Fascia d'età</label>
+                    <select class="form-select" id="userAge">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div> 
             </div>
             
-            <div >
+            <div class="d-flex justify-content-center gap-5">
                 <button type="button" class="btn btn-primary g-5" id="generateButton">Genera</button>
-                <button type="reset" class="btn btn-danger">Annulla</button>
+                <button type="reset" class="btn btn-danger" id="buttonErase">Annulla</button>
             </div>
+        </form> 
+        
+</div>
 
-    </form> 
-    <div class="mt-4">
-        <p id="resultPrice"></p>
-    </div>
+<!-- PARTE BIGLIETTO  -->
+<h2 class="mt-5 text-center">IL TUO BIGLIETTO</h2>
 
+<!-- RISULTATI BIGLIETTO -->
+<div class="container d-none" id="tablefoot">
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome Passeggero</th>
+            <th scope="col">Offerta</th>
+            <th scope="col">Carrozza</th>
+            <th scope="col">Codice CP</th>
+            <th scope="col">Costo biglietto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="nameuserStamp"></td>
+            <td id="discount"></td>
+            <td id="carrozza"></td>
+            <td id="pin"></td>
+            <td id="resultPrice"></td>
+          </tr>
+        </tbody>
+    </table>      
+
+</div>
 
 
 
