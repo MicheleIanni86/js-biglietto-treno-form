@@ -18,28 +18,28 @@
 <body>
 
     <!-- TITOLO -->
-    <h2 class="mt-5 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <h2 class="mt-5 text-center fw-bold text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
 <!-- PARTE DI INPUT -->
 <div class="container">
-        <form class="mt-4 d-flex flex-column gap-1">
+        <form class="mt-4 d-flex flex-column gap-1 py-4 bg-white rounded-5">
 
             <div class="d-flex justify-content-center gap-5">
 
                 <div class="text-center">
-                    <label class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control" id="userName">
+                    <label class="form-label labelform">Nome e Cognome</label>
+                    <input type="text" class="form-control borderinput" id="userName">
                 </div>
                 
-                <div class="text-center">
+                <div class="text-center labelform">
                     <label class="form-label">Km da percorrere</label>
-                    <input type="text" class="form-control" id="userKm" >
+                    <input type="text" class="form-control borderinput" id="userKm" >
                 </div>
                 
                 
-                <div class="mb-4 text-center">
+                <div class="mb-4 text-center labelform">
                     <label class="form-label">Fascia d'età</label>
-                    <select class="form-select" id="userAge">
+                    <select class="form-select borderinput" id="userAge">
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
                         <option value="over65">Over 65</option>
@@ -48,22 +48,23 @@
             </div>
             
             <div class="d-flex justify-content-center gap-5">
-                <button type="button" class="btn btn-primary g-5" id="generateButton">Genera</button>
-                <button type="reset" class="btn btn-danger" id="buttonErase">Annulla</button>
+                <button type="button" class="btn g-5 fw-bold" id="generateButton">Genera</button>
+                <button type="reset" class="btn fw-bold" id="buttonErase">Annulla</button>
             </div>
         </form> 
         
 </div>
 
 <!-- PARTE BIGLIETTO  -->
-<h2 class="mt-5 text-center">IL TUO BIGLIETTO</h2>
+<h2 class="mt-5 mb-4
+ text-center fw-bold text-white">IL TUO BIGLIETTO</h2>
 
 <!-- RISULTATI BIGLIETTO -->
-<div class="container d-none" id="tablefoot">
+<div class="container d-none  py-4 bg-white rounded-5" id="tablefoot">
     
     <table class="table">
         <thead>
-          <tr>
+          <tr class="text-center">
             <th scope="col">Nome Passeggero</th>
             <th scope="col">Offerta</th>
             <th scope="col">Carrozza</th>
@@ -72,7 +73,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="text-center">
             <td id="nameuserStamp"></td>
             <td id="discount"></td>
             <td id="carrozza"></td>

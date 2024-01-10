@@ -1,3 +1,28 @@
 body {
     background-color: #b91450;
 }
+
+.labelform {
+    color: #b91450;
+    font-weight: bold;
+
+}
+
+#generateButton,
+#buttonErase {
+    color: #b91450;
+    background-color: #cccccc;
+    border: 2px solid #a2a2a2;
+}
+
+#generateButton:hover {
+    border: 2px solid #eb9040;
+}
+
+#buttonErase:hover {
+    border: 2px solid #eb9040;
+}
+
+.borderinput {
+    border: 2px solid #b91450;
+}
