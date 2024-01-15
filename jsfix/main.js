@@ -19,11 +19,11 @@ generateButtonInput.addEventListener('click', function () {
     console.log(userkm);
 
     const userage = userageInput.value;
+    console.log(userage);
 
     // calcolo biglietto base
     const basePrice = userkm * 0.21;
     console.log(basePrice);
-    console.log(userage);
 
     // sconto minorenne
     if (userage == "minorenne") {
@@ -32,6 +32,7 @@ generateButtonInput.addEventListener('click', function () {
         const discountperc = 20;
         const discount = price * discountperc / 100;
         finalprice = price - discount;
+        console.log(finalprice);
 
         // sconto over 65
     } else if (userage == "over65") {
@@ -40,11 +41,13 @@ generateButtonInput.addEventListener('click', function () {
         const discountperc = 40;
         const discount = price * discountperc / 100;
         finalprice = price - discount;
+        console.log(finalprice);
 
         // tariffa base
     } else {
         document.getElementById('discount').innerText = "Tariffa Base";
         finalprice = basePrice;
+        console.log(finalprice);
 
     }
     nameuserStamp.innerText = usernameInput.value;
@@ -52,12 +55,13 @@ generateButtonInput.addEventListener('click', function () {
     resultPrice.innerText = finalprice.toFixed(2);
 
     // numero random carrozza
-    document.getElementById('carrozza').innerText = Math.floor(Math.random() * 10 + 1);
+    document.getElementById('carriage').innerText = Math.floor(Math.random() * 10 + 1);
     // numero random codice boglietto
-    document.getElementById('pin').innerText = Math.floor(Math.random() * 99999 + 1);
+    document.getElementById('ticket-pnr').innerText = Math.floor(Math.random() * (99999 - 10000 + 1) + 10000);
 
     tablefoot.classList.remove('d-none');
 });
+
 // FUNZIONE BOTTONE SCOMPARSA
 buttonDanger.addEventListener('click', function () {
     tablefoot.classList.add('d-none');
